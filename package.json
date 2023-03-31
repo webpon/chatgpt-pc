@@ -1,0 +1,70 @@
+{
+  "name": "chatgpt",
+  "productName": "chatgpt",
+  "version": "1.0.0",
+  "description": "chatgpt pc客户端",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "electron . --developer",
+    "start": "electron .",
+    "postinstall": "electron-builder install-app-deps",
+    "build": "electron-builder",
+    "build:mac": "electron-builder -m",
+    "build:linux": "electron-builder -l",
+    "build:win": "electron-builder -w",
+    "build:win32": "electron-builder -w --ia32",
+    "build:win64": "electron-builder -w --x64",
+    "make:release": "node ./cmd/modules/release/index.js"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "electron",
+    "electron-builder"
+  ],
+  "author": {
+    "name": "Heliomar P. Marques",
+    "email": "heliomarpm@proton.me"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^23.1.1",
+    "electron-builder": "^23.6.0",
+    "open": "^8.4.2",
+    "semver": "^7.3.8"
+  },
+  "build": {
+    "appId": "br.heliomarpm.elqs",
+    "productName": "chatgpt",
+    "copyright": "Copyright © 2023 — ${author}",
+    "artifactName": "${name}_setup_v${version}_${os}-${arch}.${ext}",
+    "portable": {
+      "artifactName": "${productName}_Portable-v${version}_${os}-${arch}.${ext}"
+    },
+    "directories": {
+      "buildResources": "src/assets/build",
+      "output": "dist"
+    },
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "./src/pwa-512x512.png"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "./src/pwa-512x512.png"
+    },
+    "linux": {
+      "category": "Utility",
+      "target": [
+        "AppImage",
+        "deb",
+        "freebsd",
+        "rpm"
+      ]
+    }
+  }
+}
