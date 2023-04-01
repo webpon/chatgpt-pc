@@ -48,13 +48,7 @@
     },
     "mac": {
       "category": "public.app-category.utilities",
-      "icon": "./src/dist/pwa-512x512.png",
-      "target": [
-        {
-          "target": "dmg",
-          "arch": ["x64"]
-        }
-      ]
+      "icon": "./src/dist/pwa-512x512.png"
     },
     "win": {
       "target": [
