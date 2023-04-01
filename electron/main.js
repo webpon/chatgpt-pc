@@ -11,9 +11,9 @@ function createWindow() {
     // Create the browser window.
     const mainWindow = new BrowserWindow({
         icon: __dirname + "/src/pwa-192x192.png",
-        minWidth: 650,
+        minWidth: 850,
         minHeight: 550,
-        width: 650,
+        width: 850,
         height: size.height - 150,
         resizable: true,
         maximizable: true,
