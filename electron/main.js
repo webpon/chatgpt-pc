@@ -10,8 +10,8 @@ function createWindow() {
 
     // Create the browser window.
     const mainWindow = new BrowserWindow({
-        icon: __dirname + "/src/pwa-192x192.png",
-        minWidth: 850,
+        icon: __dirname + "/src/dist/pwa-192x192.png",
+        minWidth: 650,
         minHeight: 550,
         width: 850,
         height: size.height - 150,
@@ -26,7 +26,7 @@ function createWindow() {
     })
 
     // and load the index.html of the app.
-    mainWindow.loadFile('src/index.html')// 隐藏菜单栏
+    mainWindow.loadFile('src/dist/index.html')// 隐藏菜单栏
     mainWindow.setMenu(null)
 
     // Open the DevTools.
