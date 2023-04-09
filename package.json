@@ -1,7 +1,7 @@
 {
   "name": "chatgpt",
   "productName": "chatgpt",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "chatgpt pc客户端",
   "main": "electron/main.js",
   "scripts": {
@@ -52,7 +52,7 @@
       "target": [
         {
           "target": "dmg",
-          "arch": ["x64"]
+          "arch": ["x64", "arm64"]
         }
       ]
     },
