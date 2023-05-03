@@ -1,0 +1,4 @@
+productName: "chatgpt"
+appId: "com.github.chatgpt.chatgpt"
+
+asar: true
